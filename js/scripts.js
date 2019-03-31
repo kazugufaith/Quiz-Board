@@ -1,4 +1,4 @@
-var numbers = ["1","2","3","4","5","6","7","8","9","10"];
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 var answered = 0;
 var blank = 0;
 var score = 0;
@@ -8,59 +8,55 @@ var advice = "";
 var percentage = 0
 //Checks to see how many questions were attempted and how many left blank
 var checkAll = function() {
-  for( i = 0; i < numbers.length; i++) {
-    if($("input:radio[name=question" + numbers[i] + "]").is(":checked")) {
+  for (i = 0; i < numbers.length; i++) {
+    if ($("input:radio[name=question" + numbers[i] + "]").is(":checked")) {
       answered = answered + 1;
-    }
-    else {
+    } else {
       blank = blank + 1;
     }
   }
 };
 //Adds score when radio selected, else doesn't
 var add = function() {
-  if(answer == 0 || answer == 1 ){
+  if (answer == 0 || answer == 1) {
     score = score + answer;
-  }
-  else{
+  } else {
     score = score + 0;
   }
 };
 //Calculates percentage
 var per = function() {
-  percentage = Math.round(score/10*100);
+  percentage = Math.round(score / 10 * 100);
 };
 //Generates final comments
 var result = function() {
-  if(percentage >= 80) {
+  if (percentage >= 80) {
     verdict = "This is excellent."
     advice = "No need to retake the test."
-  }
-  else if(percentage >= 50 && percentage < 80) {
+  } else if (percentage >= 50 && percentage < 80) {
     verdict = "This is fairly good."
     advice = "You may retake the test to improve your score."
-  }
-  else {
+  } else {
     verdict = "This is a poor score."
     advice = "It is advisable you retake the test."
-    }
+  }
 };
 //User Interface Logic
 $(document).ready(function() {
   function loop() {
-    var questions = ["first","second","third","fourth","fifth","sixth","seventh","eigth","ninth","tenth"];
+    var questions = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth", "ninth", "tenth"];
     var i = 0;
-    $('#next').click(function () {
+    $('#next').click(function() {
       $("." + questions[i]).show();
-      $("." + questions[i-1]).hide();
-      i = i + 1 ;
-      });
-      $('#previous').click(function () {
-     $("." + questions[i-1]).show();
-     $("." + questions[i]).hide();
-     i = i - 1 ;
-     });
-     $('#view').click(function() {
+      $("." + questions[i - 1]).hide();
+      i = i + 1;
+    });
+    $('#previous').click(function() {
+      $("." + questions[i - 1]).show();
+      $("." + questions[i]).hide();
+      i = i - 1;
+    });
+    $('#view').click(function() {
       questions.forEach(function(question) {
         $('.' + question).show();
       });
@@ -70,9 +66,9 @@ $(document).ready(function() {
   $("#form-container").submit(function(event) {
     event.preventDefault();
     $("#submit").attr("disabled", true);
-    numbers.forEach(function(number){
-    answer = parseInt($("input:radio[name=question" + number + "]:checked").val());
-    add();
+    numbers.forEach(function(number) {
+      answer = parseInt($("input:radio[name=question" + number + "]:checked").val());
+      add();
     });
     checkAll();
     per();
