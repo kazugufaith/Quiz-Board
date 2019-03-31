@@ -2,5 +2,12 @@ body{
   background-image:url("http://desirewebworld.in/images/onlinetest/test-2.jpg");
   background-size: auto auto;
 }
- 
+.second, .third, .fourth, .fifth, .sixth, .seventh, .eigth, .ninth, .tenth, {
+ display: none;
+}
+h1{
+ text-align: center;
+}
+.display-4{
+ font-family:font-family: 'Cinzel', serif;
 }
