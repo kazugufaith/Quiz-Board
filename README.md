@@ -1,7 +1,9 @@
 #Project Name
+
 Quiz-Board
 
 ##Description
+
 1. This is a Web Application project that provides online quiz.
 2. It basically provides interface to answer question on javascript and it provides you with result upon completion.
 3. It has a simple easy to use user interface that every user would love interaction with.  
