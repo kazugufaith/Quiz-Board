@@ -1,8 +1,11 @@
 body{
   background-image:url("http://desirewebworld.in/images/onlinetest/test-2.jpg");
-  background-size: auto auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
 }
-.second, .third, .fourth, .fifth, .sixth, .seventh, .eigth, .ninth, .tenth, {
+.second, .third, .fourth, .fifth, .sixth, .seventh, .eighth, .ninth, .tenth{
  display: none;
 }
 h1{
@@ -39,3 +42,4 @@ h1{
 }
 #out-but{
  padding:10px;
+}
