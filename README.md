@@ -20,11 +20,13 @@ Faith Kazungu
 
 ###Setup instructions
 
-1. Just find my repository in github or simply type this url in your browser
+1. Just find my repository in github or simply type this url in your browser https://kazugufaith.github.io/Quiz-Board/ 
 2. Secondly Navigate through the Application and basically answer the questions.
 3. Finally click submit for it to mark your answers.
 4. Results would be displayed on the html page.
+
 ###Live Link
+ https://kazugufaith.github.io/Quiz-Board/
 
 ###CONTACTS
 1. faithmugesia@gmail.com
