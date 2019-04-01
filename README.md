@@ -6,6 +6,7 @@ Quiz-Board
 2. It basically provides interface to answer question on javascript and it provides you with result upon completion.
 3. It has a simple easy to use user interface that every user would love interaction with.  
 ###Authors
+
 Faith Kazungu
 
 ###Technologies Used
@@ -24,5 +25,7 @@ Faith Kazungu
 ###CONTACTS
 1. faithmugesia@gmail.com
 2. +(254)798-578-613
+
 ###License
+
 Copyright © 2019, faith kazungu. Released under the MIT License- see the LICENSE.md file for details.
