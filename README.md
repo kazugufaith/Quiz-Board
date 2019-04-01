@@ -15,7 +15,9 @@ Faith Kazungu
 3. Javascript.
 4. JQuery.
 5. Bootstrap.
+
 ###Setup instructions
+
 1. Just find my repository in github or simply type this url in your browser
 2. Secondly Navigate through the Application and basically answer the questions.
 3. Finally click submit for it to mark your answers.
