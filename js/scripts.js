@@ -42,29 +42,113 @@ var result = function() {
   }
 };
 //User Interface Logic
-$(document).ready(function() {
-  function loop() {
-    var questions = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth", "ninth", "tenth"];
-    var i = 0;
-    $('#next').click(function() {
-      $("." + questions[i]).show();
-      $("." + questions[i - 1]).hide();
-      i = i + 1;
+// $(document).ready(function() {
+//   function loop() {
+//     var questions = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth", "ninth", "tenth"];
+//     var i = 0;
+//     $('#next').click(function() {
+//       $("." + questions[i]).show();
+//       $("." + questions[i - 1]).hide();
+//       i = i + 1;
+//     });
+//     $('#previous').click(function() {
+//       $("." + questions[i - 1]).show();
+//       $("." + questions[i]).hide();
+//       i = i - 1;
+//     });
+//     $('#view').click(function() {
+//       questions.forEach(function(question) {
+//         $('.' + question).show();
+//       })
+//       ;
+//     });
+//   }
+//   loop();
+  $(document).ready(function() {
+    $("button#button1").click(function() {
+      $(".second").toggle();
+      $(".first").hide();
     });
-    $('#previous').click(function() {
-      $("." + questions[i - 1]).show();
-      $("." + questions[i]).hide();
-      i = i - 1;
-    });
-    $('#view').click(function() {
-      questions.forEach(function(question) {
-        $('.' + question).show();
-      })
-      ;
-    });
-  }
-  loop();
 
+    $("button#button2").click(function() {
+      $(".second").hide();
+      $(".third").toggle();
+    });
+    $("button#button2p").click(function() {
+      $(".first").toggle();
+      $(".second").hide();
+    });
+
+    $("button#button3").click(function() {
+      $(".third").hide();
+      $(".fourth").toggle();
+    });
+    $("button#button3p").click(function() {
+      $(".third").hide();
+      $(".second").toggle();
+    });
+
+    $("button#button4").click(function() {
+      $(".fourth").hide();
+      $(".fifth").toggle();
+    });
+    $("button#button4p").click(function() {
+      $(".fourth").hide();
+      $(".third").toggle();
+    });
+
+    $("button#button5").click(function() {
+      $(".fifth").hide();
+      $(".sixth").toggle();
+    });
+    $("button#button5p").click(function() {
+      $(".fifth").hide();
+      $(".fourth").toggle();
+    });
+
+    $("button#button6").click(function() {
+      $(".sixth").hide();
+      $(".seventh").toggle();
+    });
+    $("button#button6p").click(function() {
+      $(".sixth").hide();
+      $(".fifth").toggle();
+    });
+
+    $("button#button7").click(function() {
+      $(".seventh").hide();
+      $(".eighth").toggle();
+    });
+    $("button#button7p").click(function() {
+      $(".seventh").hide();
+      $(".sixth").toggle();
+    });
+
+    $("button#button8").click(function() {
+      $(".eighth").hide();
+      $(".ninth").toggle();
+    });
+    $("button#button8p").click(function() {
+      $(".eighth").hide();
+      $(".seventh").toggle();
+    });
+
+    $("button#button9").click(function() {
+      $(".ninth").hide();
+      $(".tenth").toggle();
+    });
+    $("button#button9p").click(function() {
+      $(".ninth").hide();
+      $(".eighth").toggle();
+    });
+
+    $("button#button10p").click(function() {
+      $(".tenth").hide();
+      $(".ninth").toggle();
+    });
+    $("button#button11").click(function() {
+      location.reload(true);
+    });
 
   $("#form-container").submit(function(event) {
 
