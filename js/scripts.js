@@ -59,23 +59,28 @@ $(document).ready(function() {
     $('#view').click(function() {
       questions.forEach(function(question) {
         $('.' + question).show();
-      });
+      })
+      ;
     });
   }
   loop();
+
+
   $("#form-container").submit(function(event) {
+
     event.preventDefault();
     $("#submit").attr("disabled", true);
     numbers.forEach(function(number) {
       answer = parseInt($("input:radio[name=question" + number + "]:checked").val());
       add();
+      checkAll();
+      per();
+      result();
+      $("#score").text(score + "/10" + " - " + percentage + "%");
+      $("#attempt").text("You attempted " + answered + " question(s) and left " + blank + " blanks.");
+      $("#final").text("You scored " + score + " out of 10. " + verdict + " " + advice);
     });
-    checkAll();
-    per();
-    result();
-    $("#score").text(score + "/10" + " - " + percentage + "%");
-    $("#attempt").text("You attempted " + answered + " question(s) and left " + blank + " blanks.");
-    $("#final").text("You scored " + score + " out of 10. " + verdict + " " + advice);
+
   });
   $('#reload').click(function() {
     location.reload(true);

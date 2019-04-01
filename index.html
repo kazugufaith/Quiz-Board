@@ -21,6 +21,7 @@
     <div class="row">
       <div class="col-md-8">
         <form action="index.html" class="card" id="form-container" method="post" name="form-container">
+          <div class="well">
           <!-- Question 1 -->
           <div class="first">
             <h1>1/10</h1>
@@ -42,6 +43,7 @@
               <input class="form-check-input" id="question1D" name="question1" type="radio" value="0">
               <label class="form-check-label" for="question1D">Game</label>
             </div>
+          </div>
             <!-- Question 2 -->
             <div class="second">
               <h1>2/10</h1>
@@ -62,7 +64,8 @@
                 <input class="form-check-input" id="question2D" name="question2" type="radio" value="0">
                 <label class="form-check-label" for="question2D">Confirm and</label>
               </div>
-            </div><!-- Question 3 -->
+            </div>
+            <!-- Question 3 -->
             <div class="third">
               <h1>3/10</h1>
               <p>Which of these is not looping structure in javaScript?</p>
@@ -125,6 +128,8 @@
                 <label class="form-check-label" for="question5D">Push Errors</label>
               </div>
             </div>
+          </div>
+          <div class="well">
             <!-- Question 6 -->
             <div class="sixth">
               <h1>6/10</h1>
@@ -230,12 +235,16 @@
                 <input class="form-check-input" id="question10D" name="question10" type="radio" value="0">
                 <label class="form-check-label" for="question10D">It declares four dimensional array</label>
               </div>
+              <button type="submit" name="button"  id="final">Submit Test</button>
+            </form>
+          </div>
+          </div>
+          </div>
               <div class="col-md-4">
                 <div class="card" id="res">
                   <h1>RESULTS</h1>
                   <h2 id="score">0</h2>
                   <p id="attempt"></p>
-                  <p id="final">Submit test</p>
                   <div id="out-but">
                     <button class="btn btn-success btn-block" id="reload" name="button" type="button">Retry</button>
                     <button class="btn btn-success btn-block" id="view" name="button" type="button">View All Questions</button>
@@ -243,7 +252,7 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
           <script src="js/jquery-3.3.1.js" type="text/javascript">
           </script>
           <script src="js/scripts.js" type="text/javascript">
